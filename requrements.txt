@@ -1,0 +1,32 @@
+# Toll Data ETL Pipeline with Apache Airflow
+
+## Overview
+This project implements an ETL (Extract, Transform, Load) pipeline using
+Apache Airflow to process toll data from multiple file formats (CSV, TSV,
+and fixed-width text) into a single consolidated, transformed dataset.
+
+## Architecture
+The pipeline consists of 7 sequential tasks:
+1. **Download** - Fetch compressed dataset from remote source
+2. **Untar** - Extract the downloaded archive
+3. **Extract CSV** - Pull relevant fields from vehicle data
+4. **Extract TSV** - Pull relevant fields from toll plaza data
+5. **Extract Fixed-Width** - Pull relevant fields from payment data
+6. **Consolidate** - Merge all extracted data into one file
+7. **Transform** - Normalize vehicle type field to uppercase
+
+## Tech Stack
+- Apache Airflow (orchestration)
+- Python (pandas, csv, tarfile, wget)
+- LocalExecutor
+
+## How to Run
+1. Install dependencies: `pip install -r requirements.txt`
+2. Set AIRFLOW_HOME to point to this project
+3. Copy `dags/ETL_toll_data.py` to `$AIRFLOW_HOME/dags`
+4. Run `airflow db migrate`
+5. Start Airflow: `airflow standalone`
+6. Unpause and trigger `ETL_toll_data` from the UI or CLI
+
+## DAG Graph
+[Add a screenshot of your DAG graph from the Airflow UI here]

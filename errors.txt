@@ -1,0 +1,10 @@
+2026-06-12T16:51:56.711865Z [info     ] setup plugin alembic.autogenerate.schemas [alembic.runtime.plugins] loc=plugins.py:37
+2026-06-12T16:51:56.712018Z [info     ] setup plugin alembic.autogenerate.tables [alembic.runtime.plugins] loc=plugins.py:37
+2026-06-12T16:51:56.712075Z [info     ] setup plugin alembic.autogenerate.types [alembic.runtime.plugins] loc=plugins.py:37
+2026-06-12T16:51:56.712117Z [info     ] setup plugin alembic.autogenerate.constraints [alembic.runtime.plugins] loc=plugins.py:37
+2026-06-12T16:51:56.712152Z [info     ] setup plugin alembic.autogenerate.defaults [alembic.runtime.plugins] loc=plugins.py:37
+2026-06-12T16:51:56.712185Z [info     ] setup plugin alembic.autogenerate.comments [alembic.runtime.plugins] loc=plugins.py:37
+2026-06-12T16:51:56.819264Z [warning  ] Could not import graphviz. Rendering graph to the graphical format will not be possible. 
+You might need to install the graphviz package and necessary system packages.
+Run `pip install graphviz` to attempt to install it. [py.warnings] category=UserWarning filename=/Users/amayatibana/Projects/python_etl_project/airflow_env/lib/python3.13/site-packages/airflow/cli/commands/dag_command.py lineno=50
+2026-06-12T16:51:56.906717Z [error    ] Database migration required. Please run `airflow db migrate`. Make sure the command is run using Airflow version 3.2.2. [airflow.utils.db] loc=db.py:987
