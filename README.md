@@ -1,5 +1,3 @@
-# toll-data-etl-airflow
-End-to-end ETL pipeline built with Apache Airflow to extract, transform, and load toll transaction data from CSV, TSV, and fixed-width files into a single cleaned dataset. Demonstrates modular workflow orchestration and production-style data processing using Python and Airflow DAGs.
 # 🚦 Toll Data ETL Pipeline with Apache Airflow
 
 ## 📌 Overview
@@ -34,3 +32,76 @@ The DAG performs the following steps:
 ---
 
 ## 📁 Project Structure
+
+```text
+python_etl_project/
+│
+├── dags/
+│   └── ETL_toll_data.py
+├── airflow.db (ignored)
+├── airflow_env/
+└── README.md
+```
+
+---
+
+## 🚀 How to Run
+
+### 1. Create virtual environment
+
+```bash
+python3 -m venv airflow_env
+source airflow_env/bin/activate
+```
+
+### 2. Install dependencies
+
+```bash
+pip install apache-airflow pandas wget
+```
+
+### 3. Initialize Airflow
+
+```bash
+airflow db migrate
+```
+
+### 4. Start Airflow
+
+```bash
+airflow standalone
+```
+
+### 5. Add DAG
+
+Make sure your DAG file is in:
+
+```bash
+$AIRFLOW_HOME/dags/
+```
+
+### 6. Trigger DAG
+
+Open Airflow UI → enable DAG → run `ETL_toll_data`
+
+---
+
+## 📊 Output
+
+A single consolidated dataset containing cleaned toll transaction records ready for analysis.
+
+---
+
+## 🧠 Learning Outcomes
+
+- Building ETL pipelines with Airflow
+- Working with multiple file formats
+- DAG orchestration and task dependencies
+- Data transformation using Python
+
+---
+
+## 📌 Author
+
+**Carlos Amaya**  
+Aspiring Data Engineer  
