@@ -10,7 +10,7 @@ The workflow is fully orchestrated using Airflow DAGs and demonstrates modular, 
 ## ⚙️ Tech Stack
 - Apache Airflow
 - Python
-- Pandas
+- Pandas as pd
 - CSV / TSV / Fixed-width parsing
 - Wget & Tarfile
 - LocalExecutor
